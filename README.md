@@ -8,7 +8,6 @@ A full-stack web application for discovering, favoriting, and adopting pets from
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Tech Stack](#tech-stack)
-- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
