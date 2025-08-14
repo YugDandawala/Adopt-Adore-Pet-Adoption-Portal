@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Adopt & Adore: Pet Adoption Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for discovering, favoriting, and adopting pets from shelters and rescues. Built with a modern React frontend and a Node.js/Express/MongoDB backend.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Browse pets by species, breed, age, size, gender, and location
+- View detailed pet profiles with images and descriptions
+- User authentication (signup/login)
+- Favorite pets and manage your favorites
+- Submit adoption applications with detailed forms
+- Adoption confirmation and status tracking
+- Responsive, modern UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Project Structure
+```
+backend/           # Node.js/Express/MongoDB API
+  models/          # Mongoose models (Pet, User, Adoption)
+  routes/          # API routes (pets, users, adoptions)
+  config/          # Database config
+  middleware/      # Auth middleware
+  server.js        # Main server entry point
+frontend/
+  myapp/           # React app (Create React App)
+    src/
+      components/  # Reusable UI components
+      pages/       # Main app pages (Home, Browse, Login, etc.)
+      styles/      # CSS
+    public/        # Static assets
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack
+- **Frontend:** React, React Router, React Hook Form, Zod, Lucide React
+- **Backend:** Node.js, Express, MongoDB, Mongoose, JWT, bcryptjs, dotenv, cors
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (v18+ recommended)
+- MongoDB (local or Atlas)
 
-### `npm run eject`
+### Backend Setup
+1. Navigate to the backend folder:
+   ```sh
+   cd backend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create a `.env` file with:
+   ```env
+   MONGODB_URI=mongodb://localhost:27017/petadoption
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
+4. Start the backend server:
+   ```sh
+   node server.js
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Setup
+1. Navigate to the frontend React app:
+   ```sh
+   cd frontend/myapp
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the React app:
+   ```sh
+   npm start
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints (Sample)
+- `GET /api/pets` — List pets (with filters, pagination)
+- `GET /api/pets/:id` — Get pet details
+- `POST /api/users/signup` — Register user
+- `POST /api/users/login` — Login user
+- `POST /api/adoptions` — Submit adoption application
+- `GET /api/adoptions/:id` — Get adoption status
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[MIT](LICENSE)
